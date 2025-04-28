@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+python-socketio[asyncio]
+motor
+pydantic
+openai
+python-dotenv
