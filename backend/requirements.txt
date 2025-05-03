@@ -1,6 +1,6 @@
 fastapi
-uvicorn
-python-socketio
+uvicorn[standard]
+python-socketio[asyncio]
 motor
 pydantic
 openai

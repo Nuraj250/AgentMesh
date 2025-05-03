@@ -6,6 +6,8 @@ class AgentConfig(BaseModel):
     name: str
     role: str
     tools: List[str]
+    icon: str = None
+    position: dict = None
 
 class Connection(BaseModel):
     from_agent: str

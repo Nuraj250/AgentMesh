@@ -14,6 +14,9 @@ async def disconnect(sid):
 
 @sio.event
 async def start_workflow(sid, data):
+    """
+    Expects: { "workflow_id": "xyz", "input": "user input" }
+    """
     workflow = await db["workflows"].find_one({"id": data["workflow_id"]})
     if not workflow:
         await sio.emit('error', {'message': 'Workflow not found'}, room=sid)
@@ -23,6 +26,7 @@ async def start_workflow(sid, data):
     connections = workflow['connections']
     input_data = data['input']
 
+    # Start from user node
     current_agent_id = next((conn['to_agent'] for conn in connections if conn['from_agent'] == 'user'), None)
 
     while current_agent_id:

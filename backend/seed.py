@@ -3,9 +3,9 @@ from database import db
 
 async def seed():
     agents = [
-        { "id": "agent_1", "name": "Summarizer", "role": "Summarizes input text", "tools": ["web_search"] },
-        { "id": "agent_2", "name": "Critic", "role": "Reviews and improves summary", "tools": ["embedding_search"] },
-        { "id": "agent_3", "name": "Reporter", "role": "Formats the final report", "tools": ["formatting"] }
+        { "id": "agent_1", "name": "Summarizer", "role": "Summarizes input text", "tools": ["web_search"], "icon": "/agent-icon.png", "position": {"x":100, "y":200} },
+        { "id": "agent_2", "name": "Critic", "role": "Reviews summaries", "tools": ["embedding_search"], "icon": "/agent-icon.png", "position": {"x":300, "y":200} },
+        { "id": "agent_3", "name": "Reporter", "role": "Formats output", "tools": ["formatting"], "icon": "/agent-icon.png", "position": {"x":500, "y":200} }
     ]
 
     connections = [
@@ -16,14 +16,14 @@ async def seed():
 
     workflow = {
         "id": "workflow_1",
-        "user_id": "demo_user_1",
+        "user_id": "demo_user",
         "agents": agents,
         "connections": connections
     }
 
     await db["workflows"].delete_many({"id": "workflow_1"})
     await db["workflows"].insert_one(workflow)
-    print("✅ Seeded workflow successfully.")
+    print("✅ Seeded initial workflow.")
 
 if __name__ == "__main__":
     asyncio.run(seed())
