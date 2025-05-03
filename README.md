@@ -154,4 +154,4 @@ This project is licensed under the MIT License.
 
 Made with ❤️ by \[Nuraj250]
 
-* GitHub: [@yourgithub](https://github.com/Nuraj250)
+* GitHub: [@Nuraj250](https://github.com/Nuraj250)
