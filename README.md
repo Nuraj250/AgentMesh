@@ -1,6 +1,6 @@
 # 🧠 AgentMesh
 
-**AgentMesh** is a dynamic multi-agent orchestration platform that allows users to create, connect, and run AI agents visually — like building AI workflows as graphs!
+**AgentMesh** is a dynamic multi-agent orchestration platform that allows users to create, connect, and run AI agents visually like building AI workflows as graphs!
 
 Built with:
 - 🖥️ Frontend: Next.js, TailwindCSS, Cytoscape.js, Socket.IO
