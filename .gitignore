@@ -1,4 +1,4 @@
-# === Node.js / Next.js ===
+# === .js ===
 node_modules/
 .next/
 out/
@@ -36,7 +36,6 @@ env/
 # Pipenv
 Pipfile.lock
 
-# Poetry
 poetry.lock
 
 # pyright (Python type checker for VSCode)
@@ -50,5 +49,4 @@ Thumbs.db
 *.swp
 *.swo
 
-# === Other ===
 *.sqlite3
